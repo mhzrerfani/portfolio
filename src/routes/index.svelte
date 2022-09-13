@@ -1,10 +1,15 @@
 <script>
-	import * as THREE from 'three';
-	import * as SC from 'svelte-cubed';
+  import Welcome from "../components/Welcome.svelte";
+  import Information from "../components/Information.svelte";
+  import TV from "../components/TV.svelte";
+
+  let isIntroFinished = false;
 </script>
 
-<SC.Canvas>
-	<SC.Mesh geometry={new THREE.BoxGeometry()} />
-	<SC.PerspectiveCamera position={[1, 1, 3]} />
-    <SC.OrbitControls enableZoom={false} />
-</SC.Canvas>
+<TV>
+  {#if !isIntroFinished}
+    <Welcome on:finish="{() => (isIntroFinished = !isIntroFinished)}" />
+  {:else}
+    <Information />
+  {/if}
+</TV>

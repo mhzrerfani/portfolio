@@ -1,0 +1,35 @@
+import type { CustomOptions, OptionsFields } from '../types';
+import type GlitchedWriter from '../index';
+import type { PresetName } from '../presets';
+import type Char from './char';
+export default class Options {
+    private writer;
+    private options;
+    glyphs: string;
+    charset: string[];
+    space: string;
+    oneAtATime: OptionsFields['oneAtATime'];
+    maxGhosts: number;
+    constructor(writer: GlitchedWriter, options?: CustomOptions | PresetName | null);
+    set(options?: CustomOptions | PresetName | null): void;
+    extend(options?: CustomOptions | PresetName | null): void;
+    parseOptions(options?: CustomOptions | PresetName | null): CustomOptions;
+    private updateInternal;
+    setCharset(): void;
+    setMaxGhosts(): void;
+    getGlyph(char: Char): string;
+    private baseGetGlyph;
+    get steps(): number;
+    getInterval(char: Char): number;
+    private baseGetInterval;
+    getDelay(char: Char): number;
+    private baseGetDelay;
+    get mode(): "matching" | "normal" | "erase" | "erase_smart" | "clear";
+    get html(): boolean;
+    get endless(): boolean;
+    get fps(): number;
+    get letterize(): boolean;
+    get ghostChance(): number;
+    get changeChance(): number;
+    get glyphsFromText(): boolean;
+}

@@ -1,0 +1,9 @@
+runtime: nodejs16
+entrypoint: node index.js
+handlers:
+  - url: /_app/
+    static_dir: storage/_app
+    expiration: 30d 0h
+  - url: /.*
+    secure: always
+    script: auto
