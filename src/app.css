@@ -1,4 +1,13 @@
-/* Write your global styles here, in PostCSS syntax */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+@font-face {
+  font-family: "Vintage";
+  src: url("./assets/fonts/VintageWaves-GOwxm.otf");
+}

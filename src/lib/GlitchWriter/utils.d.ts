@@ -1,0 +1,27 @@
+import type { RangeOrNumber } from './types';
+export declare function random(min: number, max: number, math?: 'floor' | 'round' | 'ceil'): number;
+export declare const clamp: (min: number, value: number, max: number) => number;
+export declare const deleteRandom: (array: unknown[]) => boolean;
+export declare function getRandom<T>(iterable: Array<T>): T;
+export declare function getRandom(iterable: string): string;
+export declare function filterDuplicates(iterable: string): string;
+export declare function filterDuplicates<T>(iterable: Array<T>): Array<T>;
+export declare function parseCharset(input: string | string[] | Set<string>): string;
+export declare const wait: (time: number) => Promise<number>;
+export declare function promiseWhile(conditionFunc: () => boolean, actionPromise: () => Promise<unknown>): Promise<void>;
+export declare const arrayOfTheSame: <T>(value: T, length: number) => T[];
+export declare const isInRange: (min: number, value: number, max: number) => boolean;
+export declare const animateWithClass: (element: HTMLElement | Element, className: string) => void;
+export declare function getRandomFromRange(range: RangeOrNumber, round?: boolean): number;
+export declare const coinFlip: (p?: number) => boolean;
+export declare type LetterItem = {
+    value: string;
+    type?: 'tag' | 'html_entity' | 'whitespace';
+};
+export declare const letterToLetterItem: (string: string) => LetterItem;
+export declare const stringToLetterItems: (string: string | string[]) => LetterItem[];
+export declare const isSpecialChar: (l: string) => boolean;
+export declare const wordsRgx: RegExp;
+export declare function htmlToArray(string: string): LetterItem[];
+export declare function filterHtml(string: string): string;
+export declare function trim(str: string, l: string): string;
