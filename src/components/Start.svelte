@@ -8,7 +8,7 @@
 </script>
 
 <div
-  class="w-screen h-screen bg-n flex items-center justify-center select-none"
+  class="w-screen h-screen bg-neutral-800 flex items-center justify-center select-none"
 >
   <div class="w-96 relative flex h-auto items-center justify-center">
     <img class="relative bottom-4 w-full" src="/img/frame.svg" alt="frame" />
