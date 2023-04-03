@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Lobster+Two&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -9,5 +11,5 @@
 
 @font-face {
   font-family: "Vintage";
-  src: url("./assets/fonts/VintageWaves-GOwxm.otf");
+  src: url("/fonts/VintageWaves-GOwxm.otf");
 }

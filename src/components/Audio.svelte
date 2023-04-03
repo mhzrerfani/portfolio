@@ -1,7 +1,3 @@
-<script>
-  import src from "../assets/audio/mozart-symphony.mp3";
-</script>
-
 <audio class="hidden" autoplay>
-  <source src="{src}" type="audio/mpeg" />
+  <source src="/audio/mozart-symphony.mp3" type="audio/mpeg" />
 </audio>

@@ -1,8 +1,6 @@
 <style type="postcss">
-  @import url("https://fonts.googleapis.com/css2?family=Lobster+Two&display=swap");
-
   .glitched {
-    @apply text-7xl text-center w-[80%] mx-auto font-old;
+    @apply text-7xl text-center w-[80%] mx-auto font-old select-none;
     color: transparent;
     text-shadow: -4px 3px 0 white, -14px 10px 0 rgba(10, 14, 39, 1);
     opacity: 0.7;
