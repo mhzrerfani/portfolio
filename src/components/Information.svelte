@@ -34,6 +34,7 @@
   import { fade } from "svelte/transition";
 
   const links = [
+    { title: "Resume", url: "./resume" },
     { title: "Github", url: "https://github.com/mhzrerfani" },
     { title: "Dribbble", url: "https://dribbble.com/mhzrerfani" },
     { title: "Twitter", url: "https://twitter.com/mhzrerfani" },
