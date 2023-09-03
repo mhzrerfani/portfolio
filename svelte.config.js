@@ -1,15 +1,10 @@
-import adapter from "@sveltejs/adapter-static";
 import { vitePreprocess } from "@sveltejs/kit/vite";
-
+import vercel from "@sveltejs/adapter-vercel";
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
   kit: {
-    adapter: adapter({
-      pages: "build",
-      assets: "build",
-      fallback: null,
-    }),
+    adapter: vercel(),
   },
 
   preprocess: vitePreprocess(),
