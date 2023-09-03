@@ -1,19 +1,10 @@
-<style type="postcss">
-  .glitched {
-    @apply text-7xl text-center w-[80%] mx-auto font-old select-none;
-    color: transparent;
-    text-shadow: -4px 3px 0 white, -14px 10px 0 rgba(10, 14, 39, 1);
-    opacity: 0.7;
-  }
-</style>
-
-<script lang="ts">
+<script>
   import { onMount, createEventDispatcher } from "svelte";
   import { fade } from "svelte/transition";
   import GlitchedWriter, { wait } from "../lib/GlitchWriter";
 
-  let glitchedEl: HTMLDivElement,
-    finishCounter = 0;
+  let glitchedEl;
+  let finishCounter = 0;
 
   const dispatch = createEventDispatcher(),
     onFinishCallback = () => {
@@ -37,7 +28,16 @@
 </script>
 
 <div
-  out:fade="{{ delay: 1500, duration: 1200 }}"
+  out:fade={{ delay: 1500, duration: 1200 }}
   class="glitched"
-  bind:this="{glitchedEl}"
-></div>
+  bind:this={glitchedEl}
+/>
+
+<style lang="postcss">
+  .glitched {
+    @apply text-7xl text-center w-[80%] mx-auto font-old select-none;
+    color: transparent;
+    text-shadow: -4px 3px 0 white, -14px 10px 0 rgba(10, 14, 39, 1);
+    opacity: 0.7;
+  }
+</style>

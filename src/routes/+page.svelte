@@ -32,11 +32,11 @@
 </svelte:head>
 
 {#if !isIntroStarted}
-  <Start on:start="{startIntro}" />
+  <Start on:start={startIntro} />
 {:else}
   <TV>
     {#if !isIntroFinished}
-      <Welcome on:finish="{() => (isIntroFinished = !isIntroFinished)}" />
+      <Welcome on:finish={() => (isIntroFinished = !isIntroFinished)} />
     {:else}
       <Information />
     {/if}
