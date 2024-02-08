@@ -1,6 +1,3 @@
-<style>
-</style>
-
 <script>
   import { createEventDispatcher } from "svelte";
 
@@ -14,7 +11,7 @@
     <img class="relative bottom-4 w-full" src="/img/frame.svg" alt="frame" />
     <button
       class="absolute w-44 pb-0 z-50 text-white font-old text-5xl border-b-4 border-transparent hover:border-white"
-      on:click="{() => dispatch('start')}"
+      on:click={() => dispatch("start")}
     >
       Start
     </button>

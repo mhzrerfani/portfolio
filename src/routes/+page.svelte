@@ -3,32 +3,24 @@
   import Information from "../components/Information.svelte";
   import TV from "../components/TV.svelte";
   import Start from "../components/Start.svelte";
+  import { description } from "../constants";
 
   import "../app.css";
 
   let isIntroFinished = false;
   let isIntroStarted = false;
 
-  const startIntro = () => {
+  function startIntro() {
     isIntroStarted = true;
-  };
+  }
 </script>
 
 <svelte:head>
   <title>Mahziyar Erfani Portfolio</title>
-  <meta
-    property="description"
-    content="I'm Mahziyar Erfani and this is my portfolio and resume. I'm a Front-End Developer and UI/UX designer based in Iran who wants to
-    create cool stuff, especially a time machine to travel back to the 30's.
-    also I love Magic, Music and Dota."
-  />
+  <meta property="description" content={description} />
   <meta property="og:image" content="/preview.png" />
   <meta property="og:title" content="Mahziyar Erfani Portfolio" />
-  <meta
-    property="og:description"
-    content="I'm Mahziyar Erfani and this is my portfolio and resume. I'm a Front-End Developer and UI/UX designer based in Iran who wants to
-    create cool stuff, especially a time machine to travel back to the 30's"
-  />
+  <meta property="og:description" content={description} />
 </svelte:head>
 
 {#if !isIntroStarted}

@@ -1,3 +1,19 @@
+<script>
+  import Audio from "../components/Audio.svelte";
+</script>
+
+<div class="screen">
+  <div class="error-noise">
+    <div class="error-effect">
+      <div class="old-tv-content">
+        <slot />
+      </div>
+    </div>
+  </div>
+</div>
+
+<Audio />
+
 <style lang="postcss">
   .screen {
     @apply overflow-hidden relative h-screen w-screen;
@@ -5,7 +21,9 @@
 
   .screen::after {
     @apply content-[""] absolute w-full h-full box-border border-[75vw] border-solid border-[#0a0a0a] border-l-[50vw] border-r-[50vw];
-    animation: turn-on 1s ease 1s 2, turned-on 1s ease 2s infinite;
+    animation:
+      turn-on 1s ease 1s 2,
+      turned-on 1s ease 2s infinite;
   }
 
   .error-effect {
@@ -32,9 +50,11 @@
     @apply content-[""] absolute w-full h-full;
     background: radial-gradient(transparent 50%, rgba(0, 0, 0, 0.8)),
       linear-gradient(rgba(255, 255, 255, 0.4) 10%, transparent);
-    box-shadow: inset 0 5px 25px rgba(255, 255, 255, 0.2),
+    box-shadow:
+      inset 0 5px 25px rgba(255, 255, 255, 0.2),
       inset 5px 0 15px rgba(255, 255, 255, 0.2),
-      inset -5px 0 15px rgba(255, 255, 255, 0.1), 0 0 10px rgba(0, 0, 0, 1),
+      inset -5px 0 15px rgba(255, 255, 255, 0.1),
+      0 0 10px rgba(0, 0, 0, 1),
       inset 0 200px 5px rgba(255, 255, 255, 0.05);
   }
 
@@ -128,19 +148,3 @@
     }
   }
 </style>
-
-<script>
-  import Audio from "../components/Audio.svelte";
-</script>
-
-<div class="screen">
-  <div class="error-noise">
-    <div class="error-effect">
-      <div class="old-tv-content">
-        <slot />
-      </div>
-    </div>
-  </div>
-</div>
-
-<Audio />

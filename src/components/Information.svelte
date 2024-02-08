@@ -1,21 +1,13 @@
 <script>
   import { fade } from "svelte/transition";
-
-  const links = [
-    { title: "Resume", url: "./resume" },
-    { title: "Github", url: "https://github.com/mhzrerfani" },
-    { title: "Dribbble", url: "https://dribbble.com/mhzrerfani" },
-    { title: "Twitter", url: "https://twitter.com/mhzrerfani" },
-  ];
+  import { description, links } from "../constants";
 </script>
 
 <div class="wrapper" in:fade={{ delay: 1500, duration: 1200 }}>
   <img class="avatar" src="/img/avatar.jpg" alt="avatar" />
   <div class="name">Mahziyar Erfani</div>
   <p class="description">
-    I'm a Front-End Developer and UI/UX designer based in Iran who wants to
-    create cool stuff, especially a time machine to travel back to the 30's.
-    also I love Magic, Music and Dota.
+    {description}
   </p>
   <div class="links-wrapper">
     {#each links as { title, url }}
@@ -53,7 +45,7 @@
   }
 
   .links-wrapper {
-    @apply flex gap-5 my-5;
+    @apply flex gap-5 my-5 flex-wrap;
   }
 
   .frame {
